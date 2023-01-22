@@ -1,0 +1,44 @@
+.checkbox
+  position: relative
+
+  &__input
+    display: none
+  
+  &__label
+    position: relative
+    display: block
+    color: $color-grey
+    padding-left: 25px
+    font-size: .9rem
+    cursor: pointer
+
+    &::before
+      content: ''
+      display: block
+      width: 12px
+      height: 12px
+      border: 1px solid $color-grey
+      position: absolute
+      left: 0
+      top: 2px
+      border-radius: 2px
+    
+    &::after
+      content: ''
+      display: block
+      width: 8px
+      height: 8px
+      background: none
+      position: absolute
+      left: 3px
+      top: 5px
+  
+  &__label-link
+    background: linear-gradient(115.64deg,#000aff,rgba(101,55,233,.78) 72.33%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+.checkbox__input
+  &:checked + label
+    &::after
+      background: $color-grey
